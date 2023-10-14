@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-DisplayWelcomeMessage();
+        DisplayWelcomeMessage();
 
         string userName = PromptUserName();
         int userNumber = PromptUserNumber();
