@@ -5,10 +5,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        string newText = "and it came to pass that the lord spake unto me saying";
+        string newText = "And when ye shall receive these things, I would exhort you that ye would aask God, the Eternal Father, in the name of Christ, if these things are not btrue; and if ye shall ask with a csincere heart, with dreal intent, having efaith in Christ, he will fmanifest the gtruth of it unto you, by the power of the Holy Ghost. And by the power of the Holy Ghost ye may aknow the btruth of all things.";
         string book = "Moroni";
         string chapter = "10";
-        string verse = "1";
+        string verse = "4";
         // PUT Do you want to enter an end verse?
         // answer = GET
         //  IF answer = "Y"
@@ -16,11 +16,11 @@ class Program
         //      Reference newReference = new Reference(book, chapter, verse, endVerse);
         //  ELSE
         //      reference = New(book, chapter, verse)
-        string endVerse = "2";
-        Reference newReference = new Reference(book, chapter, verse, endVerse);
+        string endVerse = "5";
+        Reference newReference = new(book, chapter, verse, endVerse);
 
         
-        Scripture scripture = new Scripture(newReference, newText);
+        Scripture scripture = new(newReference, newText);
        
         while( true )
         {
