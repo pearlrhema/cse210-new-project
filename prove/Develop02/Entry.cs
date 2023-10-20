@@ -3,15 +3,20 @@ public class Entry
     public string _date;
     public string _userRespond;
     public string _prompt;
+    private PromptsGenerator pgen = new();
 
-    public void UserResponds(string date, string prompt, string userRespond)
+    public void Write()
     {
-        _date = date;
-        _prompt = prompt;
-        _userRespond = userRespond;
+        _date = DateTime.Now.ToShortDateString();
+        _prompt = pgen.GetRandomPrompt();
+        Console.WriteLine(_prompt);
+        _userRespond = Console.ReadLine();
+    }
 
-        /*Console.WriteLine(_prompt);
+    public void Display()
+    {
+        Console.Write(_date + " ");
+        Console.WriteLine(_prompt);
         Console.WriteLine(_userRespond);
-        Console.WriteLine(_date);*/
     }
 }

@@ -28,7 +28,6 @@ public class Program
 
         
         int choice = -1;
-        string UserEntry = "";
         string userFile = "";
         PromptsGenerator prompts = new PromptsGenerator();
         {
@@ -41,19 +40,10 @@ public class Program
                     Console.WriteLine(item._menu1);
                 }
                     Console.Write("what do you want to do? ");
-                    choice = int.Parse(Console.ReadLine());
+                    
                 if (choice == 1)
                 {
-                    string randomPrompt = (prompts.DisplayRandomPrompt());
-                    Console.WriteLine(randomPrompt);
-                    Console.Write("> ");
-                    UserEntry = Console.ReadLine();
-                    DateTime theCurrentTime = DateTime.Now;
-                    string dateText = theCurrentTime.ToShortDateString();
-                    Entry entry = new Entry();
-                    entry.UserResponds(dateText, randomPrompt, UserEntry);
-                    
-                    jounal.AddEntries(entry);
+                    jounal.AddEntries();
                 }
                 else if (choice == 2)
                 {
@@ -68,7 +58,7 @@ public class Program
                     Console.Write(">");
                     userFile = Console.ReadLine();
                     jounal.SaveToFile(userFile);
-                    Console.WriteLine($"your journal has been updated at {userFile}");
+                    Console.WriteLine($"Your journal has been updated at {userFile}");
                 }
                 else if (choice == 4)
                 {
@@ -76,6 +66,7 @@ public class Program
                     Console.Write(">");
                     userFile = Console.ReadLine();
                     jounal.ReadFromFile(userFile);
+                    Console.WriteLine($"Your journal has been loaded from {userFile} with the following entries:");
                 }
 
                 else if (choice == 5)
