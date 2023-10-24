@@ -27,11 +27,12 @@ public class Program
         MenuList.Add(MenuItem5);
 
         
-        int choice = -1;
+        int choice = 0;
         string userFile = "";
         PromptsGenerator prompts = new PromptsGenerator();
         {
             Journal jounal = new Journal();
+            
             
             while (choice !=5 )
             {
@@ -40,6 +41,7 @@ public class Program
                     Console.WriteLine(item._menu1);
                 }
                     Console.Write("what do you want to do? ");
+                    choice = int.Parse(Console.ReadLine());
                     
                 if (choice == 1)
                 {

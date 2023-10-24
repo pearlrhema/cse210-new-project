@@ -19,7 +19,9 @@ public class Scripture
     public void GetRenderedText()
     {
         Console.Clear();
-        Console.Write(_reference.GetReference());
+        Console.WriteLine("Welcome to our Scipture Memorizer");
+        Console.WriteLine("");
+        Console.Write($"Our Scripture for today is {_reference.GetReference()}");
         foreach (Word item in _words)
         {
             Console.Write($"{item.GetWord()} ");
@@ -48,5 +50,9 @@ public class Scripture
             }
         }
         return true;
+    }
+    public void NewScriptureText()
+    {
+        Console.Write("Would you like to create a new scripture? ");
     }
 }

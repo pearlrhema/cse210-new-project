@@ -27,6 +27,9 @@ public class Reference
 
     // Getter method for the reference string
     public string GetReference() {
-        return _book + " " +  _chapter + ":" + _verse + "-" + _lastVerse + " ";
+        if(_lastVerse == null)
+            return _book + " " +  _chapter + ":" + _verse + " ";
+        else
+            return _book + " " +  _chapter + ":" + _verse + "-" + _lastVerse + " ";
     }/*i want to be able to return the variables that i have set to the Reference attributes*/
 }
