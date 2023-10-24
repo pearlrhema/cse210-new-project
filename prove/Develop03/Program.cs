@@ -15,6 +15,8 @@ class Program
         Reference reference;
         Scripture scripture;
 
+        // this program exceeds the core requirement as the program will always ask the user for new scriptural text and
+        //reference to be used for the memorization.
 
         Console.Write("If you would like to add another Scriptural text, enter yes else enter no\n> ");
         while (choice.ToLower() != "no" && choice.ToLower() != "yes")
