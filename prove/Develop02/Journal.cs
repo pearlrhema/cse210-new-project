@@ -43,9 +43,7 @@ public class Journal
             newEntry._date = parts[0];
             newEntry._prompt = parts[1];
             newEntry._userRespond = parts[2];
-
             entries.Add(newEntry);
-            
         }
 
     }

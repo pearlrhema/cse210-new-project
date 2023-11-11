@@ -13,6 +13,6 @@ public class PromptsGenerator
         int randomNumber = random.Next(0, listLenght);
         string prompt = prompts[randomNumber];
         return prompt;
-
+        
     }
 }

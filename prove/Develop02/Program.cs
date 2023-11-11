@@ -28,7 +28,7 @@ public class Program
 
         
         int choice = 0;
-        string userFile = "";
+        string filename;
         PromptsGenerator prompts = new PromptsGenerator();
         {
             Journal jounal = new Journal();
@@ -58,17 +58,16 @@ public class Program
                     //Journal save = new Journal();
                     Console.WriteLine("what is the filename?");
                     Console.Write(">");
-                    userFile = Console.ReadLine();
-                    jounal.SaveToFile(userFile);
-                    Console.WriteLine($"Your journal has been updated at {userFile}");
+                    filename = Console.ReadLine();
+                    jounal.SaveToFile(filename);
+                    Console.WriteLine($"Your journal has been updated at {filename}");
                 }
                 else if (choice == 4)
                 {
                     Console.WriteLine("what is the filename?");
                     Console.Write(">");
-                    userFile = Console.ReadLine();
-                    jounal.ReadFromFile(userFile);
-                    Console.WriteLine($"Your journal has been loaded from {userFile} with the following entries:");
+                    filename = Console.ReadLine();
+                    jounal.ReadFromFile(filename);
                 }
 
                 else if (choice == 5)
