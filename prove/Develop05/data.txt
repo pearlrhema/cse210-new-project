@@ -1,0 +1,4 @@
+10
+SimpleGoal|simple|test simple goal|10|True
+SimpleGoal|eternal|test eternal goal|20|False
+EternalGoal|another eternal|testing another eternal|25
