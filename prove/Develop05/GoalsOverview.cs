@@ -78,25 +78,21 @@ public class GoalsOverview
     {
         DisplayGoals();
         Console.WriteLine("Please select a goal >");
-        int index = int.Parse(Console.ReadLine()) - 1;
-        while (index !< 1 || index !> _goals.Count)
+        int index;
+        do
         {
-            if (_goals[index].IsComplete)
-            {
-                Console.WriteLine("Goal is already completed");
-                return;
-            }
-            else if (index >= 1 || index <= _goals.Count)
-            {
-                _score += _goals[index].RecordEvent();
-                return;
-            }
+            index = int.Parse(Console.ReadLine()) - 1;
+            if(index < 0 || index >= _goals.Count)
+                Console.WriteLine("Invalid input. Try again: ");
+            else if(_goals[index].IsComplete == true)
+                Console.WriteLine("Goal is already completed. Try again: ");
             else
-            {
-                Console.WriteLine("Invalid Goal");
-            }
-        }
+                break;
+        } while (true);
+        
+        _score += _goals[index].RecordEvent();
     }
+    
 
     public void SaveToFile(string userFile)
     {
@@ -134,7 +130,7 @@ public class GoalsOverview
                     _goals.Add(eternal);
                 }
 
-                else if(parts[0] == "checklist")
+                else if(parts[0] == "ChecklistGoal")
                 {
                     ChecklistGoal checklist = new(parts[1], parts[2], int.Parse(parts[3]), bool.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6]), int.Parse(parts[7]));
                     _goals.Add(checklist);
@@ -152,7 +148,7 @@ public class GoalsOverview
         }
         catch (UnauthorizedAccessException)
         {
-            Console.WriteLine("Acces to file is prohibited");
+            Console.WriteLine("Access to file is prohibited");
             return;
         }
 

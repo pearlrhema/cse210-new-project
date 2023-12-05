@@ -10,11 +10,6 @@ public class SimpleGoal : Goal
         _isComplete = isComplete;
     }
 
-    public override string GetType(string type)
-    {
-        type = "SimpleGoal";
-        return base.GetType(type);
-    }
     public override string GetSaveString()
     {
         return $"{GetType()}|{_goalname}|{_goalDescription}|{_goalPoints}|{_isComplete}";

@@ -9,11 +9,7 @@ public class EternalGoal : Goal
 
     //  PUBLIC GetSaveString()
     //      RETURN "{GetType()}|{goalName}|{GoalDescription}|{goalPoints}
-    public override string GetType(string type)
-    {
-        type = "EternalGoal";
-        return base.GetType(type);
-    }
+ 
     public override string GetSaveString()
     {
         return $"{GetType()}|{_goalname}|{_goalDescription}|{_goalPoints}";

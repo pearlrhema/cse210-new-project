@@ -23,12 +23,6 @@ public class ChecklistGoal : Goal
         _goalPoints = points;
         _isComplete = isComplete;
     }
-    public override string GetType(string type)
-    {
-        type = "CheckListGoal";
-        return base.GetType(type);
-    }
-
 
     public override string GetSaveString()
     {

@@ -15,7 +15,6 @@ public abstract class Goal
         _goalname = name;
         _goalDescription = description;
         _goalPoints = points;
-        // _isComplete = false;
     }
 
     //This constructor is used when reading in the data from a file
@@ -44,9 +43,4 @@ public abstract class Goal
 
     public abstract string GetSaveString();
     public abstract int RecordEvent();
-    public virtual string GetType(string type)
-    {
-        _goalType = type;
-        return _goalType;
-    }
 }
