@@ -1,5 +1,0 @@
-100
-SimpleGoal|Simple|Test|10|False
-SimpleGoal|Simple2|Test|10|False
-EternalGoal|Eternal|Test|20
-ChecklistGoal|Checklist|Test|30|False|3|5|10
