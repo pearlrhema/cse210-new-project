@@ -6,30 +6,30 @@ class Program
     {
         List<Video> videos = new();
         Video video1 = new();
-        video1._title = "Title 1";
-        video1._author = "Author 1";
+        video1._title = "The Oval";
+        video1._author = "Tyler Perrys";
         video1._length = 312f;
-        video1.AddComment(new Comment("Commentor 1", "Comment 1"));
-        video1.AddComment(new Comment("Commentor 2", "Comment 2"));
-        video1.AddComment(new Comment("Commentor 3", "Comment 3"));
+        video1.AddComment(new Comment("Godwin Essien", "I have never watch this movie befor"));
+        video1.AddComment(new Comment("Blessing Essien", "I hope it will be a nice video"));
+        video1.AddComment(new Comment("Dara Godwin", "I dont have internet connection to watch the movie thanks"));
         videos.Add(video1);
         
         Video video2 = new();
-        video2._title = "Title 2";
-        video2._author = "Author 2";
+        video2._title = "Prison Break";
+        video2._author = "Trailer";
         video2._length = 452f;
-        video2.AddComment(new Comment("Commentor 4", "Comment 4"));
-        video2.AddComment(new Comment("Commentor 5", "Comment 5"));
-        video2.AddComment(new Comment("Commentor 6", "Comment 6"));
+        video2.AddComment(new Comment("Aboki", "Nothing really captured my heart about the movie"));
+        video2.AddComment(new Comment("Jarelle Nolwene", "after seeing the commercial it did not strike me as something that i wanted to see "));
+        video2.AddComment(new Comment("Moon#", "I really enjoyed the movie though"));
         videos.Add(video2);
         
         Video video3 = new();
-        video3._title = "Title 3";
-        video3._author = "Author 3";
+        video3._title = "Swallow";
+        video3._author = "Nollywood";
         video3._length = 784f;
-        video3.AddComment(new Comment("Commentor 7", "Comment 7"));
-        video3.AddComment(new Comment("Commentor 8", "Comment 8"));
-        video3.AddComment(new Comment("Commentor 9", "Comment 9"));
+        video3.AddComment(new Comment("Fat Makeup", "I am very impressed by the movie"));
+        video3.AddComment(new Comment("Scuderia", "compelling story"));
+        video3.AddComment(new Comment("SKY M KAKASHI", "swallow addresses deep societal issues on a surface level"));
         videos.Add(video3);
         
         foreach (Video video in videos)
