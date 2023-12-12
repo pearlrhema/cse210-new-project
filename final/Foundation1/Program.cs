@@ -38,3 +38,4 @@ class Program
         }
     }
 }
+//the foundation 1 and 2 are working well though i am yet to complete the foundation 3 and 4
